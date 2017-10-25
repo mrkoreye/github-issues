@@ -5,11 +5,10 @@ class GitHubService {
     this._github = new GitHub({
       token: oauthKey,
     });
-    this.currentUser = this._github.getUser();
   }
 
   getRepos() {
-    return this.currentUser.listRepos();
+    return this._github.getUser().listRepos();
   }
 
   getIssues(repo) {
