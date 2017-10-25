@@ -1,9 +1,9 @@
 import GitHub from 'github-api';
 
 class GitHubService {
-  constructor() {
+  constructor(oauthKey) {
     this._github = new GitHub({
-      token: '67b40624ceff6ac0b8f62e8948b76508eed7f903'
+      token: oauthKey,
     });
     this.currentUser = this._github.getUser();
   }
