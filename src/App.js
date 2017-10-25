@@ -53,7 +53,7 @@ class App extends Component {
       const currentOrders = JSON.parse(this.localStorage.getItem(ISSUE_ORDERS_NAME));
       const currentRepoName = this.state.currentRepo.full_name;
 
-      return currentOrders[currentRepoName];
+      return currentOrders && currentOrders[currentRepoName];
     }
   }
 
